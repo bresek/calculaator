@@ -1,2 +1,3 @@
 # calculaator
-an interactive calculator website
+an interactive calculator website. Built using HTML, CSS, and Javascript. 
+
