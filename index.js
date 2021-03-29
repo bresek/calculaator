@@ -43,8 +43,8 @@ function operate(operation,num1,num2){
   }
 }
 
-//display number clicks
 
+//initalize variables 
 buttons = document.querySelectorAll('button')
 let inputs = []
 let operator = ''
@@ -53,14 +53,15 @@ let displayValue = ''
 buttons.forEach((button)=>{
   button.addEventListener("click", function(event){
     if (event.target.classList.contains('num')){
-
-       //need to change this to handle multidigit number
       displayValue += event.target.innerText
       display(displayValue)
 
     }else if (event.target.classList.contains('operator')){
       if (inputs.length === 0){
-        inputs.push(displayValue)
+        if (displayValue !== ''){
+          inputs.push(displayValue)
+        }
+
       }
       displayValue = ''
       operator = event.target.innerText

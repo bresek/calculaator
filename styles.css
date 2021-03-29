@@ -29,7 +29,7 @@ body{
 
 }
 .key, .operator, .clear, .equals{
-  border: 1px solid #1e212d;
+  /* border: 1px solid #1e212d; */
 }
 .key{
   color: #faf3e0;
@@ -37,7 +37,7 @@ body{
   margin: 0;
   display: inline;
   background-color: #eabf9f;
-    font-size: 3rem;
+  font-size: 3rem;
 }
 .key:hover{
   background-color: #1e212d;
@@ -45,4 +45,16 @@ body{
 }
 .operator, .clear, .equals{
   background-color:#b68973;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  color:#b68973;
+}
+
+footer{
+  padding-top: 1rem;
+  font-size: 1rem;
 }
