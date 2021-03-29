@@ -48,19 +48,30 @@ function operate(operation,num1,num2){
 buttons = document.querySelectorAll('button')
 let inputs = []
 let operator = ''
+let displayValue = ''
 
 buttons.forEach((button)=>{
   button.addEventListener("click", function(event){
     if (event.target.classList.contains('num')){
-      inputs.push(event.target.innerText) //need to change this to handle multidigit number
-      let displayValue = inputs[inputs.length-1]
+
+       //need to change this to handle multidigit number
+      displayValue += event.target.innerText
       display(displayValue)
+
     }else if (event.target.classList.contains('operator')){
+      if (inputs.length === 0){
+        inputs.push(displayValue)
+      }
+      displayValue = ''
       operator = event.target.innerText
     } else if (event.target.classList.contains('clear')){
       inputs = []
       operator = ''
+      displayValue = ''
       display('')
+    }else if (event.target.classList.contains('equals')){
+      inputs.push(displayValue)
+      console.log(inputs)
     }
     if (inputs.length >1){
       console.log(inputs[inputs.length-2])
