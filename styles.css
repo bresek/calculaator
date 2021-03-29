@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+}
+.calculatorbody{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: silver;
+  grid-gap: .5rem;
+  justify-items: center;
+  width: 50vw;
+}
+.display{
+  margin-top: 2rem;
+  height: 5vh;
+  width: 80%;
+  background-color: red;
+  grid-column: 1/5;
+}
+.key{
+  padding: 1rem;
+  margin: 0;
+  display: inline;
+  background-color: gray;
+}
+.operator{
+  background-color:yellow;
+}
